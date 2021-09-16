@@ -1,0 +1,22 @@
+server:
+  port: 9002
+
+  #server.port=8070
+    #spring.application.name=service-provider
+  #
+  #spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: localhost:8848
+        #换成nginx 得1111端口，做集群
+        server-addr: 192.168.27.130:1111
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
